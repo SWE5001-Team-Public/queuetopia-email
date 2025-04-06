@@ -48,6 +48,8 @@ jobs:
           pip install -r requirements.txt -t package
           cp lambda_function.py package/
           cp email.html package/
+          echo "RESEND_API_KEY=${{ secrets.RESEND_API_KEY }}" > .env.production
+          cp .env.production package/
           cd package
           zip -r ../function.zip .
 
