@@ -1,6 +1,9 @@
 import json
 import os
 import resend
+from dotenv import load_dotenv
+
+load_dotenv(".env.production")
 
 resend.api_key = os.environ["RESEND_API_KEY"]
 
