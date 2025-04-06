@@ -30,3 +30,4 @@ stevedore==5.4.1
 toml==0.10.2
 typing_extensions==4.13.1
 urllib3==2.3.0
+setuptools==65.5.1
