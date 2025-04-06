@@ -47,6 +47,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt -t package
           cp lambda_function.py package/
+          cp email.html package/
           cd package
           zip -r ../function.zip .
 
