@@ -30,11 +30,11 @@ def lambda_handler(event, context):
         .replace('{{CompanyName}}', "QueueTopia")
         .replace('{{Name}}', f"{data['first_name']} {data['last_name']}")
         .replace('{{Email}}', data['email'])
-        .replace('{{ConfirmationUrl}}', "http://queuetopia-ui.vercel.app/confirm?email=" + data['email'])
+        .replace('{{ConfirmationUrl}}', "https://queuetopia-ui.vercel.app/confirm?email=" + data['email'])
       )
 
       params: resend.Emails.SendParams = {
-        "from": "Queuetopia <no-reply@notification.webdevsolutions.io>",
+        "from": "QueueTopia <no-reply@notification.webdevsolutions.io>",
         "to": [data["email"]],
         "subject": "[QueueTopia] You're almost there!",
         "html": personalized_email,
