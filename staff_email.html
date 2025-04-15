@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <title>Account Registration Confirmation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f6fa;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .email-container {
+      max-width: 600px;
+      margin: auto;
+      background-color: #ffffff;
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .header {
+      font-size: 24px;
+      font-weight: bold;
+      color: #2f3640;
+      margin-bottom: 10px;
+    }
+
+    .sub-header {
+      font-size: 16px;
+      color: #718093;
+      margin-bottom: 30px;
+    }
+
+    .content {
+      font-size: 16px;
+      color: #353b48;
+      line-height: 1.6;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 20px;
+      background-color: #000;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    .footer {
+      font-size: 12px;
+      color: #718093;
+      margin-top: 40px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<div class="email-container">
+  <div class="header">Welcome to {{CompanyName}}!</div>
+  <div class="sub-header">Thank you for registering with us.</div>
+  <div class="content">
+    Hi {{Name}},<br/><br/>
+
+    You have been added to <strong>{{CompanyName}}</strong> as a staff. You are now one step away from using our
+    services! All you have to do now is to confirm that your email address is valid. You sign in with this email address
+    through the link provided below.<br/><br/>
+
+    <strong>Temporary Password:</strong> {{Password}}<br/><br/>
+
+    <i>Please change your password after signing in for the first time.</i><br/><br/>
+
+    <a href="{{ConfirmationUrl}}" class="button">Confirm your Email</a><br/><br/>
+
+    <div style="font-size: 12px">
+      If you didn't create this account, please ignore this message or contact our support team.
+    </div>
+  </div>
+  <div class="footer">
+    &copy; 2025 {{CompanyName}}. All rights reserved.
+  </div>
+</div>
+</body>
+</html>
